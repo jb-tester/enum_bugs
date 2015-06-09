@@ -1,3 +1,7 @@
+
+
+
+0) springlocalmodels diagram is available for any java class (no spring at all)
 1) point to any enum constant in enum and invoke refactor/find and replace code duplicates
 Assertion failed: null element
 java.lang.Throwable
