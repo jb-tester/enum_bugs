@@ -1,0 +1,59 @@
+1) point to any enum constant in enum and invoke refactor/find and replace code duplicates
+Assertion failed: null element
+java.lang.Throwable
+	at com.intellij.openapi.diagnostic.Logger.assertTrue(Logger.java:144)
+	at com.intellij.psi.search.LocalSearchScope.<init>(LocalSearchScope.java:69)
+	at com.intellij.psi.search.LocalSearchScope.<init>(LocalSearchScope.java:60)
+	at com.intellij.psi.search.LocalSearchScope.<init>(LocalSearchScope.java:56)
+	at com.intellij.refactoring.util.duplicates.MethodDuplicatesHandler.createDuplicatesFinder(MethodDuplicatesHandler.java:306)
+	at com.intellij.refactoring.util.duplicates.MethodDuplicatesHandler.hasDuplicates(MethodDuplicatesHandler.java:260)
+	at com.intellij.refactoring.util.duplicates.MethodDuplicatesHandler$4.visitFile(MethodDuplicatesHandler.java:174)
+	at com.intellij.psi.impl.source.PsiJavaFileBaseImpl.accept(PsiJavaFileBaseImpl.java:427)
+	at com.intellij.analysis.AnalysisScope.doProcessFile(AnalysisScope.java:452)
+	at com.intellij.analysis.AnalysisScope.access$500(AnalysisScope.java:61)
+	at com.intellij.analysis.AnalysisScope$9.run(AnalysisScope.java:397)
+	at com.intellij.analysis.AnalysisScope$10.compute(AnalysisScope.java:418)
+	at com.intellij.analysis.AnalysisScope$10.compute(AnalysisScope.java:414)
+	at com.intellij.psi.impl.PsiDocumentManagerBase$6.run(PsiDocumentManagerBase.java:391)
+	at com.intellij.psi.impl.PsiDocumentManagerBase$7.run(PsiDocumentManagerBase.java:423)
+	at com.intellij.openapi.application.impl.ApplicationImpl.runReadAction(ApplicationImpl.java:916)
+	at com.intellij.psi.impl.PsiDocumentManagerBase.commitAndRunReadAction(PsiDocumentManagerBase.java:418)
+	at com.intellij.psi.impl.PsiDocumentManagerBase.commitAndRunReadAction(PsiDocumentManagerBase.java:388)
+	at com.intellij.analysis.AnalysisScope.commitAndRunInSmartMode(AnalysisScope.java:414)
+	at com.intellij.analysis.AnalysisScope.processFile(AnalysisScope.java:401)
+	at com.intellij.analysis.AnalysisScope.access$300(AnalysisScope.java:61)
+	at com.intellij.analysis.AnalysisScope$3.process(AnalysisScope.java:287)
+	at com.intellij.analysis.AnalysisScope$3.process(AnalysisScope.java:280)
+	at com.intellij.analysis.AnalysisScope.accept(AnalysisScope.java:369)
+	at com.intellij.analysis.AnalysisScope.accept(AnalysisScope.java:280)
+	at com.intellij.analysis.AnalysisScope.accept(AnalysisScope.java:273)
+	at com.intellij.refactoring.util.duplicates.MethodDuplicatesHandler.invokeOnScope(MethodDuplicatesHandler.java:156)
+	at com.intellij.refactoring.util.duplicates.MethodDuplicatesHandler.invokeOnScope(MethodDuplicatesHandler.java:126)
+	at com.intellij.refactoring.util.duplicates.MethodDuplicatesHandler$1.run(MethodDuplicatesHandler.java:86)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$TaskRunnable.run(CoreProgressManager.java:544)
+	at com.intellij.openapi.progress.impl.CoreProgressManager$2.run(CoreProgressManager.java:133)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.a(CoreProgressManager.java:433)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:383)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:54)
+	at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:118)
+	at com.intellij.openapi.progress.impl.ProgressManagerImpl$1.run(ProgressManagerImpl.java:126)
+	at com.intellij.openapi.application.impl.ApplicationImpl$8.run(ApplicationImpl.java:403)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+	at org.jetbrains.ide.PooledThreadExecutor$1$1.run(PooledThreadExecutor.java:55)
+
+
+2) refactor/push members down for enum is enabled; it just removes the selected members
+
+3) refactor/extract interface, refactor/pull members up creates not compilable code if enum constants are selected in dialog (allowed)
+
+4) refactor/replace constructor with factory method / with builder creates not compilable code for enums
+
+5) refactor/change signature should be disabled for enums
+
+6) new enumeration constant adding to enum from uml diagram works incorrectly if enum contains some members other than constants
+
+7) refactor/encapsulate fields for enum constants should not suggest visibility modifiers other than 'as is'
