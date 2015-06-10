@@ -22,7 +22,7 @@ public class EnumSetDemo {
 EnumSet<Color> yellow = EnumSet.of(Color.RED, Color.GREEN);
         drawLine(yellow);
         EnumSet<Color> white = EnumSet.of(Color.RED, Color.GREEN, Color.BLUE);
-        drawLine(white); // RED + BLUE = PINK
+        drawLine(white);
         EnumSet<Color> pink = EnumSet.of(Color.RED, Color.BLUE);
         drawLine(pink); }
         public static void drawLine(Set<Color> colors) {

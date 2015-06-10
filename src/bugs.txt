@@ -50,9 +50,10 @@ java.lang.Throwable
 	at org.jetbrains.ide.PooledThreadExecutor$1$1.run(PooledThreadExecutor.java:55)
 
 
-2) refactor/push members down for enum is enabled; it just removes the selected members
+2) refactor/push members down for enum is enabled; it just removes the selected members if the constants have no bodies;
+probably bodies could be added
 
-3) refactor/extract interface, refactor/pull members up creates not compilable code if enum constants are selected in dialog (allowed)
+3) refactor/extract interface creates not compilable code if enum constants are selected in dialog (allowed)
 
 4) refactor/replace constructor with factory method / with builder creates not compilable code for enums
 
