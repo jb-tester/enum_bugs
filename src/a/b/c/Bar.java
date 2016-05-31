@@ -21,6 +21,12 @@ public enum Bar  {
         public int getAaa() {
             return aaa;
         }
+    },
+    B4(4){
+        @Override
+        public int getAaa() {
+            return 0;
+        }
     };
 
     Bar(int aaa) {
