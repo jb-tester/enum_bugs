@@ -1,4 +1,4 @@
-package aaa.bbb.CCC111;
+package aaa.bbb.ccc111;
 
 /**
  * *******************************
