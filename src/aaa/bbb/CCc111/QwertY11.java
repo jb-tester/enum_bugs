@@ -1,4 +1,4 @@
-package aaa.bbb.Ccc111;
+package aaa.bbb.CCc111;
 
 /**
  * *******************************
@@ -6,7 +6,7 @@ package aaa.bbb.Ccc111;
  * Project: enum_bugs
  * *******************************
  */
-public class Qwerty11 {
+public class QwertY11 {
     //
     // 2
     //3
