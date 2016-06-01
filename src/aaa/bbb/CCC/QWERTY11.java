@@ -6,7 +6,7 @@ package aaa.bbb.CCC;
  * Project: enum_bugs
  * *******************************
  */
-public class QWERTY1 {
+public class QWERTY11 {
     //
     // 2
     //3
