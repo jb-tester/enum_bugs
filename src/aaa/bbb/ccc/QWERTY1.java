@@ -9,4 +9,5 @@ package aaa.bbb.ccc;
 public class QWERTY1 {
     //
     // 2
+    //3
 }
