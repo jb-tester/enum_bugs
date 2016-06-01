@@ -1,4 +1,4 @@
-package aaa.bbb.ccc;
+package aaa.bbb.CCC;
 
 /**
  * *******************************
@@ -10,4 +10,5 @@ public class QWERTY1 {
     //
     // 2
     //3
+    // 4
 }
